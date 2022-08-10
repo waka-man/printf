@@ -5,13 +5,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-int _putchar(char c);
-int _printf(const char *format, ...);
-int get_printer(const char *format, format_t *spec, va_list arg);
-int print_char(va_list arg);
-int print_str(va_list arg);
-int print_dec(va_list arg);
-
 /**
  * struct fmt - struct for selecting
  * correct formatting function based on
@@ -20,10 +13,17 @@ int print_dec(va_list arg);
  * @f: function pointer to select correct funtion
  */
 
-typdef struct fmt
+typedef struct fmt
 {
 	char *c;
 	int (*f)();
 } format_t;
+
+int _putchar(char c);
+int _printf(const char *format, ...);
+int get_printer(const char *format, format_t *spec, va_list arg);
+int print_char(va_list arg);
+int print_str(va_list arg);
+int print_dec(va_list arg);
 
 #endif /* MAIN_H */

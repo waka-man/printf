@@ -27,6 +27,7 @@ int get_printer(const char *format, format_t *spec, va_list arg)
 	{
 		if (format[index] == '%')
 		{
+			jndex = 0;
 			index++;
 			string = format[index];
 
@@ -56,7 +57,6 @@ int get_printer(const char *format, format_t *spec, va_list arg)
 		{
 			chars = chars + _putchar(string);
 		}
-
 		index++;
 		string = format[index];
 	}

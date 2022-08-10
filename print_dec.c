@@ -17,7 +17,7 @@ int print_dec(va_list arg)
 	{
 		_putchar('-');
 		num = integer * -1;
-		count++
+		count++;
 	}
 	else
 	{
